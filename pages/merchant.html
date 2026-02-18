@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Merchant Panel</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<div class="navbar">
+    <div class="logo">🏬 SuperMall Merchant</div>
+    <div>
+        <button onclick="logout()" class="nav-btn">Logout</button>
+    </div>
+</div>
+
+<div class="dashboard-container">
+
+    <div class="sidebar">
+        <h3>Merchant Panel</h3>
+        <p onclick="showSection('shops')">🏬 Shops</p>
+        <p onclick="showSection('products')">📦 Products</p>
+        <p onclick="showSection('offers')">🎯 Offers</p>
+    </div>
+
+
+    <div class="main-content">
+
+        <!-- Shops -->
+        <div id="shops" class="section">
+            <h2>Create Shop</h2>
+            <input type="text" id="shopName" placeholder="Shop Name">
+            <select id="shopCategory"></select>
+            <select id="shopFloor"></select>
+            <textarea id="shopDescription" placeholder="Description"></textarea>
+            <button onclick="createShop()">Create</button>
+
+            <h3>Your Shops</h3>
+            <ul id="shopList"></ul>
+        </div>
+
+        <!-- Products -->
+        <div id="products" class="section" style="display:none;">
+            <h2>Add Product</h2>
+            <select id="productShop" onchange="loadMerchantProducts()"></select>
+            <input type="text" id="productName" placeholder="Product Name">
+            <input type="number" id="productPrice" placeholder="Price">
+            <textarea id="productFeatures" placeholder="Features"></textarea>
+            <button onclick="addProduct()">Add</button>
+
+            <h3>Your Products</h3>
+            <ul id="productList"></ul>
+        </div>
+
+        <!-- Offers -->
+        <div id="offers" class="section" style="display:none;">
+            <h2>Add Offer</h2>
+            <select id="offerProduct"></select>
+            <input type="number" id="discountPercent" placeholder="Discount %">
+            <input type="date" id="startDate">
+            <input type="date" id="endDate">
+            <button onclick="addOffer()">Add</button>
+
+            <h3>Your Offers</h3>
+            <ul id="offerList"></ul>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+<script src="../js/firebase-config.js"></script>
+<script src="../js/auth.js"></script>
+<script src="../js/logger.js"></script>
+
+<script src="../js/shop.js"></script>
+<script src="../js/product.js"></script>
+<script src="../js/offer.js"></script>
+
+<script>
+function showSection(id) {
+
+    document.querySelectorAll(".section").forEach(sec => {
+        sec.style.display = "none";
+    });
+
+    document.getElementById(id).style.display = "block";
+
+    // highlight active
+    document.querySelectorAll(".sidebar p").forEach(p => {
+        p.style.background = "transparent";
+    });
+
+    event.target.style.background = "rgba(255,255,255,0.1)";
+}
+
+
+auth.onAuthStateChanged(async user => {
+    if (!user) {
+        window.location.href = "login.html";
+        return;
+    }
+
+    loadCategoryDropdown();
+    loadFloorDropdown();
+    loadMerchantShops();
+    loadShopDropdown();
+    loadOfferProductDropdown();
+    loadMerchantOffers();
+});
+
+</script>
+
+</body>
+</html>

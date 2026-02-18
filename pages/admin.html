@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<div class="navbar">
+    <div class="logo">🏬 SuperMall Admin</div>
+    <div>
+        <button onclick="logout()" class="nav-btn gold">Logout</button>
+    </div>
+</div>
+
+
+<div class="dashboard-container">
+
+    <!-- ================= SIDEBAR ================= -->
+    <div class="sidebar">
+        <h3>Admin</h3>
+        <p onclick="showSection('categories')" class="sidebar-link">Categories</p>
+        <p onclick="showSection('floors')" class="sidebar-link">Floors</p>
+    </div>
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+    <div class="main-content">
+
+        <!-- ================= CATEGORIES ================= -->
+        <div id="categories" class="section">
+
+            <div class="section-card">
+                <h2>Add Category</h2>
+
+                <input type="text" id="categoryName" placeholder="Category Name">
+                <button onclick="addCategory()" class="primary-btn">Add Category</button>
+
+                <h3 style="margin-top:30px;">All Categories</h3>
+                <div id="categoryList"></div>
+            </div>
+
+        </div>
+
+
+        <!-- ================= FLOORS ================= -->
+        <div id="floors" class="section" style="display:none;">
+
+            <div class="section-card">
+                <h2>Add Floor</h2>
+
+                <input type="text" id="floorName" placeholder="Floor Name">
+                <button onclick="addFloor()" class="primary-btn">Add Floor</button>
+
+                <h3 style="margin-top:30px;">All Floors</h3>
+                <div id="floorList"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- ================= FIREBASE ================= -->
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+<script src="../js/firebase-config.js"></script>
+<script src="../js/auth.js"></script>
+<script src="../js/logger.js"></script>
+<script src="../js/category.js"></script>
+<script src="../js/floor.js"></script>
+
+
+<script>
+function showSection(id) {
+    document.querySelectorAll(".section").forEach(sec => sec.style.display = "none");
+    document.getElementById(id).style.display = "block";
+}
+
+auth.onAuthStateChanged(user => {
+    if (!user) window.location.href = "login.html";
+});
+</script>
+
+</body>
+</html>

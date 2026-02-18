@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SuperMall</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+
+<body>
+<!-- ===== TOP BAR ===== -->
+<div class="top-bar">
+    <div class="top-left">
+        <i class="fa-solid fa-headset"></i> 24/7 Support Centre
+    </div>
+
+    <div class="top-right">
+        Follow Us:
+        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+    </div>
+</div>
+
+
+<!-- ===== MAIN NAVBAR ===== -->
+<div class="navbar">
+    <div class="logo">
+        🏬 SuperMall
+    </div>
+
+  
+
+    <div class="nav-buttons" id="navButtons">
+        <button class="nav-btn" onclick="window.location.href='pages/login.html'">Login</button>
+        <button class="nav-btn gold" onclick="window.location.href='pages/register.html'">Sign Up</button>
+    </div>
+</div>
+
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-content">
+        <h1>Experience Shopping Like Never Before</h1>
+        <p>A centralized luxury mall platform connecting merchants, administrators, and customers seamlessly.</p>
+        <a href="#" class="primary-btn">Explore Now</a>
+    </div>
+</section>
+
+<section class="featured-section">
+
+    <h2 class="section-title">Choose Best, See What's New!</h2>
+
+    <div class="featured-grid">
+
+        <!-- CARD 1 -->
+        <div class="featured-card purple">
+            <img src="images/fashion-models-paper-cut-out-style_23-2149374793.avif" alt="Fashion">
+            <p class="small-text">Top Trending Stores</p>
+            <h3>Fashion Brands</h3>
+            <a href="#">Explore Now →</a>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="featured-card light">
+            <img src="images/360_F_216228286_jJs9DRgJ60FrWhEHZC6kT6A0aFEbhnfG.jpg" alt="Food">
+            <p class="small-text">Delicious & Premium</p>
+            <h3>Food Court</h3>
+            <a href="#">Explore Now →</a>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="featured-card gold">
+            <img src="images/consumer-electronics_01-displays_00_720x450.jpg" alt="Electronics">
+            <p class="small-text">Latest Gadgets</p>
+            <h3>Electronics</h3>
+            <a href="#">Explore Now →</a>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- STATS -->
+<section class="stats">
+    <div class="stat-card">
+        <h2>100+</h2>
+        <p>Shops</p>
+    </div>
+
+    <div class="stat-card">
+        <h2>1 Lakh+</h2>
+        <p>Monthly Footfall</p>
+    </div>
+
+    <div class="stat-card">
+        <h2>50+</h2>
+        <p>Premium Brands</p>
+    </div>
+
+    <div class="stat-card">
+        <h2>3</h2>
+        <p>Luxury Floors</p>
+    </div>
+</section>
+
+
+<!-- BRANDS -->
+<section class="brands">
+    <h2>Brands That We Have</h2>
+    <div class="brand-grid">
+        <div class="brand">Apple</div>
+        <div class="brand">Nike</div>
+        <div class="brand">Adidas</div>
+        <div class="brand">Zara</div>
+        <div class="brand">H&M</div>
+        <div class="brand">Levi's</div>
+    </div>
+</section>
+
+
+<!-- WHY US -->
+<section class="why-us">
+    <h2>Why We Are The Best Place To Buy</h2>
+
+    <div class="why-grid">
+
+        <div class="why-card">
+            <h3>Great Deals Every Month</h3>
+            <p>Enjoy exclusive offers and premium discounts.</p>
+        </div>
+
+        <div class="why-card">
+            <h3>Easy Return Policy</h3>
+            <p>Simple and hassle-free return process.</p>
+        </div>
+
+        <div class="why-card">
+            <h3>Flexible Payments</h3>
+            <p>Pay over time with zero hidden charges.</p>
+        </div>
+
+        <div class="why-card">
+            <h3>Best Prices Guaranteed</h3>
+            <p>We ensure competitive pricing across all brands.</p>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-container">
+
+        <div>
+            <h3>SuperMall</h3>
+            <p>Premium centralized mall management platform.</p>
+        </div>
+
+        <div>
+            <h4>Support</h4>
+            <p>Terms & Conditions</p>
+            <p>Privacy Policy</p>
+        </div>
+
+        <div>
+            <h4>Contact</h4>
+            <p>Delhi, India</p>
+            <p>support@supermall.com</p>
+        </div>
+
+    </div>
+
+    <div class="copyright">
+        © 2026 SuperMall. All rights reserved.
+    </div>
+</footer>
+
+</body>
+
+
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+<script src="js/firebase-config.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+<script src="js/firebase-config.js"></script>
+
+<script>
+auth.onAuthStateChanged(async (user) => {
+
+    const nav = document.getElementById("navButtons");
+
+    if (user) {
+        const doc = await db.collection("users").doc(user.uid).get();
+        const name = doc.data().name;
+
+        nav.innerHTML = `
+            <div class="dropdown">
+                <button class="nav-btn gold">${name}</button>
+                <div class="dropdown-content">
+                    <a href="#" onclick="logout()">Logout</a>
+                </div>
+            </div>
+        `;
+    } else {
+        nav.innerHTML = `
+            <button class="nav-btn" onclick="window.location.href='pages/login.html'">Login</button>
+            <button class="nav-btn gold" onclick="window.location.href='pages/register.html'">Sign Up</button>
+        `;
+    }
+});
+
+function logout() {
+    auth.signOut().then(() => {
+        window.location.reload();
+    });
+}
+</script>
+
+
+
+</body>
+</html>
