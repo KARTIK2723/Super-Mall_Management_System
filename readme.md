@@ -1,77 +1,67 @@
-🚀 SuperMall Management System
+# 🚀 SuperMall Management System
 
-A complete role-based Mall Management System built using:
+A complete **role-based Mall Management System** built using:
 
-🔥 Firebase Authentication
+- 🔥 Firebase Authentication  
+- 🔥 Firebase Firestore  
+- 💻 HTML, CSS, JavaScript  
+- 🎨 Modern Responsive UI  
 
-🔥 Firebase Firestore
+---
 
-💻 HTML, CSS, JavaScript
+## 👥 User Roles & Features
 
-🎨 Modern UI Design
+### 🧑 User
+- View shops
+- Filter by category & floor
+- Compare products
+- View offers
 
-📌 Features
-👤 User
+### 🏪 Merchant
+- Create shops
+- Add products
+- Create offers
+- Manage own data
 
-View shops
+### 🛠 Admin
+- Add / Delete categories
+- Add / Delete floors
+- Manage system data
 
-Filter by category & floor
+---
 
-Compare products
+## 🖼 Screenshots
 
-View offers
+### 🏠 Home Page
+![Home](screenshots/home_ss.png)
 
-🛍️ Merchant
+### 🔐 Login Page
+![Login](screenshots/login_ss.png)
 
-Create shops
+### 🛒 Merchant Panel
+![Merchant](screenshots/merchant_ss.png)
 
-Add products
+### ⚙️ Admin Panel
+![Admin](screenshots/admin_ss.png)
 
-Create offers
+---
 
-Manage own data
+## 🔐 Security
 
-🛠️ Admin
+- Role-based Firestore rules
+- Secure authentication using Firebase
+- Data ownership validation
 
-Add / Delete categories
+---
 
-Add / Delete floors
+## 🛠 Tech Stack
 
-Secure role-based control
+- Vanilla JavaScript
+- Firebase v8
+- Firestore Database
 
-View system logs
+---
 
-🖼️ Screenshots
-🏠 Home Page
+## 👨‍💻 Author
 
-🔐 Login Page
-
-📝 Register Page
-
-🛠️ Admin Panel
-
-🛍️ Merchant Panel
-
-🔐 Security
-
-Firestore Rules with role-based access
-
-Admin-only category/floor management
-
-Merchant-only shop/product management
-
-Logs collection for actions
-
-🧠 Tech Stack
-
-HTML5
-
-CSS3 (Custom Modern UI)
-
-Vanilla JavaScript
-
-Firebase v8
-
-👨‍💻 Author
-
-Kartik Sharma
+**Kartik Sharma**
